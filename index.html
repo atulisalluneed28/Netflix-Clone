@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamVibe – Watch TV Shows & Movies Online</title>
+  <meta name="description" content="StreamVibe is a demo UI project for a streaming platform. Not affiliated with any company.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <div class="header">
+    <div class="background-overlay"></div>
+    <div class="gradient-overlay"></div>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./logo.png" alt="StreamVibe logo">
+      </div>
+      <div class="nav-buttons">
+        <select class="language">
+          <option>English</option>
+          <option>हिन्दी</option>
+        </select>
+        <button class="sign-in" onclick="showDemo()">Explore</button>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Unlimited movies, TV shows and more</h1>
+      <h3>Starts at ₹149. Cancel at any time.</h3>
+      <p>Ready to watch? This is a demo UI — no sign-up required.</p>
+
+      <!-- DEMO NOTICE — replaces email form (email collection = phishing trigger) -->
+      <div class="demo-banner">
+        🎬 <strong>Demo Project</strong> — This is a front-end UI built for educational purposes only.
+        No data is collected or stored. Not affiliated with any streaming service.
+      </div>
+      <button class="cta-btn" onclick="document.querySelector('.trending').scrollIntoView({behavior:'smooth'})">
+        Explore Content <span class="arrow">›</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Decorative Divider -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1400 100" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="rgba(33, 13, 22, 1)" />
+          <stop offset="16%"  stop-color="rgba(33, 13, 22, 1)" />
+          <stop offset="35%"  stop-color="rgba(184, 40, 105, 1)" />
+          <stop offset="50%"  stop-color="rgba(229, 9, 20, 1)" />
+          <stop offset="65%"  stop-color="rgba(184, 40, 105, 1)" />
+          <stop offset="84%"  stop-color="rgba(33, 13, 22, 1)" />
+          <stop offset="100%" stop-color="rgba(33, 13, 22, 1)" />
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="12" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <path d="M 0 70 Q 350 25, 700 25 T 1400 70" stroke="url(#curveGradient)" stroke-width="3" fill="none" stroke-linecap="round" />
+      <path d="M 0 100 Q 350 30, 700 30 T 1400 75" stroke="rgba(60, 100, 200, 0.3)" stroke-width="180" fill="none" stroke-linecap="round" opacity="0" filter="url(#glow)" />
+    </svg>
+  </div>
+
+  <!-- Trending Now Section -->
+  <section class="trending">
+    <div class="container">
+      <h2>Trending Now</h2>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide"><img src="./trending-1.jpg" alt="Trending 1"><span class="rank">1</span></div>
+          <div class="slide"><img src="./trending-2.jpg" alt="Trending 2"><span class="rank">2</span></div>
+          <div class="slide"><img src="./trending-3.jpg" alt="Trending 3"><span class="rank">3</span></div>
+          <div class="slide"><img src="./trending-4.jpg" alt="Trending 4"><span class="rank">4</span></div>
+          <div class="slide"><img src="./trending-5.jpg" alt="Trending 5"><span class="rank">5</span></div>
+          <div class="slide"><img src="./trending-6.jpg" alt="Trending 6"><span class="rank">6</span></div>
+          <div class="slide"><img src="./trending-7.jpg" alt="Trending 7"><span class="rank">7</span></div>
+          <div class="slide"><img src="./trending-8.jpg" alt="Trending 8"><span class="rank">8</span></div>
+          <div class="slide"><img src="./trending-9.jpg" alt="Trending 9"><span class="rank">9</span></div>
+          <div class="slide"><img src="./trending-10.jpg" alt="Trending 10"><span class="rank">10</span></div>
+        </div>
+        <button class="slider-arrow slider-arrow-right" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Reasons to Join -->
+  <section class="reasons">
+    <div class="container">
+      <h2>More reasons to join</h2>
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <h3>Enjoy on your TV</h3>
+          <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+          <div class="reason-icon"><img src="./laptop.jpg" alt="Watch on TV"></div>
+        </div>
+        <div class="reason-card">
+          <h3>Download your shows to watch offline</h3>
+          <p>Save your favourites easily and always have something to watch.</p>
+          <div class="reason-icon"><img src="./download-icon.jpg" alt="Download shows"></div>
+        </div>
+        <div class="reason-card">
+          <h3>Watch everywhere</h3>
+          <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+          <div class="reason-icon"><img src="./watch-everywhere-icon.jpg" alt="Watch everywhere"></div>
+        </div>
+        <div class="reason-card">
+          <h3>Create profiles for kids</h3>
+          <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+          <div class="reason-icon"><img src="./kids-profile-icon.jpg" alt="Kids profiles"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button class="faq-question">What is StreamVibe? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>StreamVibe is a demo streaming platform UI built for educational and portfolio purposes. It showcases front-end development skills including HTML, CSS, and JavaScript.</p>
+            <p>This is not a real service. No subscriptions, no accounts, and no data is collected.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question">How much does StreamVibe cost? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>This is a demo project — it is completely free to browse. No payment, subscription, or personal information is required.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question">Where can I watch? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>This demo UI is viewable in any modern web browser on desktop or mobile. It is a static front-end project hosted on GitHub Pages.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question">Is this affiliated with any streaming service? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>No. StreamVibe is an independent demo project created for learning purposes only. It is not affiliated with, endorsed by, or connected to any real streaming platform or company.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question">What technologies were used? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>This project was built using plain HTML5, CSS3, and vanilla JavaScript. No frameworks or backend — just front-end web development.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question">Is StreamVibe safe for kids? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Yes — this is a static demo UI with no interactive content, no logins, and no external links. It is completely safe to view.</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- CTA at bottom — no email form -->
+      <div class="email-signup-faq">
+        <p>This is a demo project built for educational purposes. No sign-up needed.</p>
+        <div class="demo-banner">
+          🛠️ <strong>Portfolio Project</strong> — View the source code on
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color:#e50914;">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Demo Project — Not a real service. No data collected.</p>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">GitHub</a>
+        <a href="#">Contact</a>
+      </div>
+      <select class="language">
+        <option>English</option>
+        <option>हिन्दी</option>
+      </select>
+      <p class="country">StreamVibe Demo · Educational Project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function showDemo() {
+      document.querySelector('.trending').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
